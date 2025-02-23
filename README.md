@@ -46,7 +46,7 @@ This command will:
 
 To specify the source and target Bible versions and start the process, use the following:
 ```
-$ python3 bible_crawler/main.py --source_bible "SBA2015" --target_translation "NIV"
+$ python bible_crawler/main.py 
 ```
 
 This will crawl the specified source Bible version (`SBA2015`) and target translation (`NIV`). You can change these values based on your requirements.
@@ -80,8 +80,13 @@ bible_crawler/
 ├── crawler.py           # Functions to crawl and merge Bible texts.
 ├── filtering.py         # Filtering functions and main integration code.
 ├── main.py              # Entry point to run the package.
+data/
+├── filtered_bible.csv   # The output of the crawled and filtered Bible data.
 requirements.txt         # Lists all Python dependencies.
 README.md               # This file.
+.gitignore               # Ignores unnecessary files/folders in version control.
+LICENSE                 # Project's license file.
+            # This file.
 ```
 
 # License
