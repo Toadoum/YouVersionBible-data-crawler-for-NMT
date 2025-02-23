@@ -9,27 +9,30 @@ To run the project, follow the steps below. This will guide you through setting 
 If you do not have `venv` package, please refer to this [link](https://linuxize.com/post/how-to-create-python-virtual-environments-on-ubuntu-18-04/) for installation instructions.
 
 ## Create virtual environment ##
+```
 $ python3 -m venv ENV_NAME
+```
 ## Activate your environment ##
+```
 $ source ENV_NAME/bin/activate
-
+```
 
 ## Install requirements ##
 
 To run this project, you must install all the necessary dependencies:
-
+```
 $ pip install -r requirements.txt
-
-# Training the model #
+```
+## Data Extraction and Cleaning#
 
 After setting up your environment and installing dependencies, you can proceed with running the main script.
 
 ### Run the crawler and data filter ##
 
 Run the following command to start the data crawling and filtering process:
-
+```
 $ python3 bible_crawler/main.py
-
+```
 
 This command will:
 
@@ -41,9 +44,9 @@ This command will:
 ## Example of running the script ##
 
 To specify the source and target Bible versions and start the process, use the following:
-
+```
 $ python3 bible_crawler/main.py --source_bible "SBA2015" --target_translation "NIV"
-
+```
 
 This will crawl the specified source Bible version (`SBA2015`) and target translation (`NIV`). You can change these values based on your requirements.
 
@@ -69,8 +72,9 @@ bible_crawler/
 ├── main.py              # Entry point to run the package.
 requirements.txt         # Lists all Python dependencies.
 README.md               # This file.
+```
+# License#
 
-#License
-This version is a complete, self-contained file, covering installation, usage, results, and project structure.
+This project is licensed under the MIT License.
 
 
