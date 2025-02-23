@@ -56,10 +56,14 @@ This will crawl the specified source Bible version (`SBA2015`) and target transl
 
 Once the data has been filtered, you can visualize the cleaned dataset:
 
-| Chapter | Verse | Source (SBA2015)  | Target (NIV) |
-|---------|-------|-------------------|--------------|
-| 1       | 1     | In the beginning...| In the beginning...|
-| 1       | 2     | And the earth...   | Now the earth...|
+
+
+| Chapter | Verse | Source (SBA2015)                  | Target (NIV)                   |
+|---------|-------|-----------------------------------|--------------------------------|
+| EXO.20  | 1     | 1Togə́bè ɓa Ala pa taje neelé lai pana: | 1And God spoke all these words: |
+| EXO.36  | 1     | 1Besaleel gə Oholiab gə diŋgamje lai gə́ njégo... | 1So Bezalel, Oholiab and every skilled person ... | 
+
+This should be a clear and consistent table format for the cleaned data. Let me know if you need further adjustments!
 
 # Project Structure
 
