@@ -1,46 +1,76 @@
-# Bible Crawler and Data Filtering Package
+# YouVersion Bible Data Crawler for NMT #
 
-This package is designed to crawl Bible texts from [bible.com](https://www.bible.com/bible/), merge two Bible versions into a parallel dataset, filter and clean the data, and finally output a CSV file containing two columns ("Source" and "Target"). This CSV file is ideal for training neural machine translation models.
+In this project, we aim to crawl Bible texts from [bible.com](https://www.bible.com/bible/), merge two Bible versions into a parallel dataset, filter and clean the data, and output a CSV file suitable for training neural machine translation models. </br>
 
-## Features
+# Run the project #
 
-- **Web Crawling:** Scrapes Bible texts for a specified source Bible version and its target translation.
-- **Data Merging:** Combines crawled data based on common chapter and verse identifiers.
-- **Data Filtering:** Cleans the merged dataset by removing duplicates, empty cells, overly long entries, HTML tags, and more.
-- **CSV Output:** Saves the final, cleaned dataset as a single CSV file with "Source" and "Target" columns.
+To run the project, follow the steps below. This will guide you through setting up your environment, installing dependencies, and running the data crawling and filtering steps.
 
-## Project Structure
+If you do not have `venv` package, please refer to this [link](https://linuxize.com/post/how-to-create-python-virtual-environments-on-ubuntu-18-04/) for installation instructions.
 
+## Create virtual environment ##
+$ python3 -m venv ENV_NAME
+## Activate your environment ##
+$ source ENV_NAME/bin/activate
+
+
+## Install requirements ##
+
+To run this project, you must install all the necessary dependencies:
+
+$ pip install -r requirements.txt
+
+# Training the model #
+
+After setting up your environment and installing dependencies, you can proceed with running the main script.
+
+### Run the crawler and data filter ##
+
+Run the following command to start the data crawling and filtering process:
+
+$ python3 bible_crawler/main.py
+
+
+This command will:
+
+1. Crawl the specified source Bible and target translation from [bible.com](https://www.bible.com/bible/).
+2. Merge the crawled data on chapter and verse identifiers.
+3. Clean the data by removing duplicates, empty cells, and unnecessary HTML tags.
+4. Output the cleaned dataset to a CSV file called `filtered_bible.csv` with "Source" and "Target" columns.
+
+## Example of running the script ##
+
+To specify the source and target Bible versions and start the process, use the following:
+
+$ python3 bible_crawler/main.py --source_bible "SBA2015" --target_translation "NIV"
+
+
+This will crawl the specified source Bible version (`SBA2015`) and target translation (`NIV`). You can change these values based on your requirements.
+
+# Results Presentation #
+
+### Cleaned Bible Data (Example) ###
+
+Once the data has been filtered, you can visualize the cleaned dataset:
+
+| Chapter | Verse | Source (SBA2015)  | Target (NIV) |
+|---------|-------|-------------------|--------------|
+| 1       | 1     | In the beginning...| In the beginning...|
+| 1       | 2     | And the earth...   | Now the earth...|
+
+# Project Structure
+
+```bash
 bible_crawler/
-├── init.py # Makes this folder a Python package.
-├── config.py # Contains user-defined configuration parameters.
-├── crawler.py # Functions to crawl and merge Bible texts.
-├── filtering.py # Filtering functions and main integration code.
-├── main.py # Entry point to run the package.
-requirements.txt # Lists all Python dependencies.
-README.md # This file.bashCopierModifier
-## Installation
+├── __init__.py          # Makes this folder a Python package.
+├── config.py            # Contains user-defined configuration parameters.
+├── crawler.py           # Functions to crawl and merge Bible texts.
+├── filtering.py         # Filtering functions and main integration code.
+├── main.py              # Entry point to run the package.
+requirements.txt         # Lists all Python dependencies.
+README.md               # This file.
 
-1. **Clone the repository:**
+#License
+This version is a complete, self-contained file, covering installation, usage, results, and project structure.
 
-   ```bash
-   git clone https://github.com/yourusername/bible_crawler.git
-   cd bible_crawler
-Install the dependencies:bashCopierModifierpip install -r requirements.txt
-ConfigurationUser-specific parameters are stored in the config.py file. By default, the parameters are set as follows:pythonCopierModifier# bible_crawler/config.py
 
-source_bible = "SBA2015"
-source_bible_num = 516
-
-target_translation = "NIV"
-target_bible_num = 111
-You can modify these values as needed.UsageTo run the package from the command line, execute one of the following commands in the parent directory of the bible_crawler folder:Using the module approach:bashCopierModifierpython -m bible_crawler.filtering
-Or by running the main entry point:bashCopierModifierpython bible_crawler/main.py
-The script will:Crawl the specified source Bible and target translation from bible.com.Merge the crawled data on chapter and verse identifiers.Filter and clean the data.Save the final clean CSV file as filtered_bible.csv with columns "Source" and "Target".RequirementsThe required Python packages are listed in the requirements.txt file:shellCopierModifierrequests&gt;=2.25.1
-beautifulsoup4&gt;=4.9.3
-pandas&gt;=1.1.5
-numpy&gt;=1.19.5
-Install them using:bashCopierModifierpip install -r requirements.txt
-ContributingContributions to improve the package are welcome! To contribute:Fork this repository.Create a new branch for your feature or bug fix:bashCopierModifiergit checkout -b my-feature-branch
-Commit your changes with clear commit messages.Push your changes to your fork:bashCopierModifiergit push origin my-feature-branch
-Open a Pull Request on GitHub with a detailed description of your changes.If you have any questions, suggestions, or bug reports, please open an issue on GitHub.LicenseThis project is licensed under the MIT License.
