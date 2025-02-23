@@ -1,6 +1,3 @@
-Here’s the updated version of the README with the **Contributing** section added:
-
-```markdown
 # YouVersion Bible Data Crawler for NMT
 
 In this project, we aim to crawl Bible texts from [bible.com](https://www.bible.com/bible/), merge two Bible versions into a parallel dataset, filter and clean the data, and output a CSV file suitable for training neural machine translation models. </br>
