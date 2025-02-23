@@ -111,5 +111,3 @@ We welcome contributions to this project! If you'd like to contribute, please fo
 
 Thank you for your contributions!
 ```
-
-This now includes the **Contributing** section, which provides instructions for anyone interested in contributing to the project. Let me know if you'd like any additional adjustments!
