@@ -62,7 +62,6 @@ Once the data has been filtered, you can visualize the cleaned dataset:
 | EXO.20  | 1     | 1Togə́bè ɓa Ala pa taje neelé lai pana: | 1And God spoke all these words: |
 | EXO.36  | 1     | 1Besaleel gə Oholiab gə diŋgamje lai gə́ njégo... | 1So Bezalel, Oholiab and every skilled person ... |
 
-This should be a clear and consistent table format for the cleaned data. Let me know if you need further adjustments!
 
 ## Features
 
