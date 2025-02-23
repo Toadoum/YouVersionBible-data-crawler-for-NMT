@@ -49,7 +49,7 @@ To specify the source and target Bible versions and start the process, use the f
 $ python bible_crawler/main.py 
 ```
 
-This will crawl the specified source Bible version (`SBA2015`) and target translation (`NIV`). You can change these values based on your requirements.
+This will crawl the specified source Bible version (`SBA2015`) and target translation (`NIV`) (english). You can change these values based on your requirements in the *config.py*.
 
 # Results Presentation
 
