@@ -49,7 +49,7 @@ To specify the source and target Bible versions and start the process, use the f
 $ python bible_crawler/main.py 
 ```
 
-This will crawl the specified source Bible version (`SBA2015`) and target translation (`NIV`) (english). You can change these values based on your requirements in the *config.py*.
+This will crawl the specified source Bible version (`SBA2015`) and target translation (`NIV`) (english). You can change these values based on your requirements in the `config.py`. For French, one can use Louis Second Bible version (`LSB`), the target bible number will be 93 (`target_bible_num = 93`)
 
 # Results Presentation
 
